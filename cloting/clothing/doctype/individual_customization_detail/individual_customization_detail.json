@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-11-14 12:52:26.212293",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bxzi",
+  "garment_item",
+  "garment_category",
+  "garment_style",
+  "fabric",
+  "colour",
+  "fit_preference",
+  "customization_type",
+  "measurement_name",
+  "measurment_value",
+  "measurement_unit",
+  "design_reference",
+  "customer_instructions"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bxzi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "garment_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Garment Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "garment_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Garment Category",
+   "options": "Cotton\nWool\nPolyster\nSilk"
+  },
+  {
+   "fieldname": "garment_style",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Garment Style",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fabric",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fabric",
+   "options": "Item"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fit_preference",
+   "fieldtype": "Select",
+   "label": "Fit Preference",
+   "options": "Normal Fit\nLoose Fit\nTight Fit"
+  },
+  {
+   "fieldname": "customization_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Customization Type",
+   "options": "Full\nPartial\nSimple"
+  },
+  {
+   "fieldname": "measurement_name",
+   "fieldtype": "Small Text",
+   "label": "Measurement Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "measurment_value",
+   "fieldtype": "Small Text",
+   "label": "Measurment value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "measurement_unit",
+   "fieldtype": "Select",
+   "label": "Measurement Unit",
+   "options": "Meter\nLength\nRoll",
+   "reqd": 1
+  },
+  {
+   "fieldname": "design_reference",
+   "fieldtype": "Attach Image",
+   "in_list_view": 1,
+   "label": "Design Reference"
+  },
+  {
+   "fieldname": "customer_instructions",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Customer Instructions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-14 18:00:50.521885",
+ "modified_by": "Administrator",
+ "module": "Clothing",
+ "name": "Individual Customization Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

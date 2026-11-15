@@ -48,6 +48,11 @@ app_license = "mit"
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+doctype_js = {
+    "Sales Order": "public/js/sales_order.js"
+}
+
+
 # Svg Icons
 # ------------------
 # include app icons in desk
@@ -261,4 +266,27 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
+doc_events = {
+    "POS Invoice": {
+        "before_submit": "cloting.overrides.pos.return_limitation"
+    },
+    "Sales Order":{
+        "on_submit": "cloting.overrides.sales_order.validate_customers"
+    }
+}
+
+fixtures = [
+    "Item",
+
+    {"dt": "Item Group", "filters": [["MrBlack Finished Goods Material", "MrBlack Scrap Material"]]},
+]
+
+scheduler_events = {
+	"daily": [
+		"cloting.notifications.email_notify.customer_fit_notify"
+	]
+}
+
+
+
 

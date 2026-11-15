@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-11-14 12:59:57.197550",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_57mj",
+  "garment_item",
+  "garment_category",
+  "garment_style",
+  "colour",
+  "size",
+  "quantity",
+  "branding_type",
+  "personalization_name",
+  "reference_image",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_57mj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "garment_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Garment Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "garment_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Garment Category",
+   "options": "Fabric\nCotton\nWool\nSilk"
+  },
+  {
+   "fieldname": "garment_style",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Garment Style"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Colour"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Size"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "branding_type",
+   "fieldtype": "Select",
+   "label": "Branding Type ",
+   "options": "Traditional\nModern\nOnline\nPaper Based"
+  },
+  {
+   "fieldname": "personalization_name",
+   "fieldtype": "Data",
+   "label": "Personalization name"
+  },
+  {
+   "fieldname": "reference_image",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reference Design"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-14 14:20:23.383722",
+ "modified_by": "Administrator",
+ "module": "Clothing",
+ "name": "Company Requirement Customization",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

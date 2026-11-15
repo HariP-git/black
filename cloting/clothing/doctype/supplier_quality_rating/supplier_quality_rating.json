@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "RATING-.###",
+ "creation": "2026-11-14 12:03:00.221805",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sjiv",
+  "amended_from",
+  "supplier",
+  "product",
+  "rating_date",
+  "quality_rating",
+  "lead_time_rating",
+  "price_rating",
+  "overall_rating",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sjiv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Supplier Quality Rating",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Table",
+   "label": "Product",
+   "options": "Product",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rating_date",
+   "fieldtype": "Date",
+   "label": "Rating Date",
+   "read_only": 1
+  },
+  {
+   "description": "1 - Poor\n2 - Good\n3 - Very Good\n4 - Excellent\n5 - Fabulous ",
+   "fieldname": "quality_rating",
+   "fieldtype": "Int",
+   "label": "Quality Rating",
+   "placeholder": "Enter Rating between 1 to 5"
+  },
+  {
+   "description": "1 - Poor\n2 - Good\n3 - Very Good\n4 - Excellent\n5 - Fabulous ",
+   "fieldname": "lead_time_rating",
+   "fieldtype": "Int",
+   "label": "Lead Time Rating",
+   "placeholder": "Enter Rating between 1 to 5"
+  },
+  {
+   "fieldname": "overall_rating",
+   "fieldtype": "Float",
+   "label": "Overall Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "description": "1 - Poor\n2 - Good\n3 - Very Good\n4 - Excellent\n5 - Fabulous ",
+   "fieldname": "price_rating",
+   "fieldtype": "Int",
+   "label": "Price Rating",
+   "placeholder": "Enter Rating between 1 to 5"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-14 12:15:15.828784",
+ "modified_by": "Administrator",
+ "module": "Clothing",
+ "name": "Supplier Quality Rating",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "supplier",
+ "track_changes": 1
+}
