@@ -1,0 +1,21 @@
+{
+ "action": "Update Settings",
+ "action_label": "Configure Rental Settings",
+ "creation": "2026-11-17 15:15:00.000000",
+ "description": "Set the company, warehouse, hold expiry, cleaning buffer, payment rules, and approved accounting accounts before accepting rentals.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_skipped": 0,
+ "title": "Configure rental settings",
+ "is_single": 1,
+ "modified": "2026-11-17 15:15:00.000000",
+ "modified_by": "Administrator",
+ "name": "Configure Rental Settings",
+ "owner": "Administrator",
+ "reference_document": "Rental Settings",
+ "validate_action": 1,
+ "field": "company",
+ "value_to_validate": "%"
+}

@@ -1,0 +1,137 @@
+{
+ "name": "Rental Booking Item",
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": [],
+ "fields": [
+  {
+   "fieldname": "rental_costume",
+   "fieldtype": "Link",
+   "label": "Rental Costume",
+   "options": "Rental Costume",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "fetch_from": "rental_costume.item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_bundle",
+   "fieldtype": "Check",
+   "label": "Bundle",
+   "default": "0",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "include_optional_components",
+   "fieldtype": "Check",
+   "label": "Include Optional Components",
+   "default": "0",
+   "depends_on": "eval:doc.is_bundle"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "label": "Qty",
+   "default": "1",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rental_rate",
+   "fieldtype": "Currency",
+   "label": "Rental Rate",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "deposit_rate",
+   "fieldtype": "Currency",
+   "label": "Deposit / Unit"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Rental Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocated_qty",
+   "fieldtype": "Int",
+   "label": "Allocated Qty",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "bundle_allocated_qty",
+   "fieldtype": "Int",
+   "label": "Complete Bundles Allocated",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "handed_over_qty",
+   "fieldtype": "Int",
+   "label": "Handed Over Qty",
+   "read_only": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "returned_qty",
+   "fieldtype": "Int",
+   "label": "Returned Qty",
+   "read_only": 1,
+   "default": "0"
+  }
+ ],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Rental",
+ "actions": [],
+ "links": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "creation": "2026-11-17 00:00:00.000000",
+ "field_order": [
+  "rental_costume",
+  "item",
+  "colour",
+  "size",
+  "qty",
+  "rental_rate",
+  "deposit_rate",
+  "amount",
+  "deposit_amount",
+  "allocated_qty",
+  "handed_over_qty",
+  "returned_qty"
+ ]
+}

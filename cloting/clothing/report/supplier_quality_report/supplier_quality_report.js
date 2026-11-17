@@ -3,12 +3,11 @@
 
 frappe.query_reports["Supplier Quality Report"] = {
 	filters: [
-		// {
-		// 	"fieldname": "supplier",
-		// 	"label": __("Supplier"),
-		// 	"fieldtype": "Link",
-		// 	"options": "Supplier",
-		// 	"reqd": 1,
-		// },
+		{
+			"fieldname": "supplier",
+			"label": __("Supplier"),
+			"fieldtype": "Link",
+			"options": "Supplier",
+		},
 	],
 };

@@ -1,0 +1,276 @@
+{
+ "name": "Rental Costume Unit",
+ "autoname": "field:unit_code",
+ "allow_rename": 0,
+ "allow_import": 1,
+ "track_changes": 1,
+ "search_fields": "barcode,colour,size,rental_costume",
+ "title_field": "unit_code",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rental Admin",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rental Manager",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0
+  },
+  {
+   "role": "Rental Cashier",
+   "read": 1,
+   "create": 0,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 0,
+   "if_owner": 0
+  },
+  {
+   "role": "Rental Storekeeper",
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 0,
+   "if_owner": 0
+  },
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "create": 0,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 0,
+   "if_owner": 0
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_code",
+   "fieldtype": "Data",
+   "label": "Unit Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rental_costume",
+   "fieldtype": "Link",
+   "label": "Rental Costume",
+   "options": "Rental Costume",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "fetch_from": "rental_costume.item"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "label": "Barcode",
+   "unique": 1,
+   "reqd": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Link",
+   "label": "Serial No",
+   "options": "Serial No"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Condition and Status"
+  },
+  {
+   "fieldname": "operational_status",
+   "fieldtype": "Select",
+   "label": "Operational Status",
+   "options": "Available\nReserved\nRented Out\nReturned\nUnder Inspection\nUnder Cleaning\nUnder Repair\nLost\nRetired",
+   "default": "Available",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "label": "Condition",
+   "options": "Good\nNormal Wear\nDamaged\nMissing Accessories",
+   "default": "Good"
+  },
+  {
+   "fieldname": "current_booking",
+   "fieldtype": "Link",
+   "label": "Current Booking",
+   "options": "Rental Booking",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase_value",
+   "fieldtype": "Currency",
+   "label": "Purchase Value"
+  },
+  {
+   "fieldname": "replacement_value",
+   "fieldtype": "Currency",
+   "label": "Replacement Value"
+  },
+  {
+   "fieldname": "rental_rate",
+   "fieldtype": "Currency",
+   "label": "Rental Rate"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Rental",
+ "actions": [],
+ "links": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "creation": "2026-11-17 00:00:00.000000",
+ "field_order": [
+  "unit_code",
+  "rental_costume",
+  "item",
+  "colour",
+  "size",
+  "col1",
+  "barcode",
+  "serial_no",
+  "warehouse",
+  "company",
+  "branch",
+  "status_section",
+  "operational_status",
+  "condition",
+  "current_booking",
+  "col2",
+  "purchase_value",
+  "replacement_value",
+  "rental_rate",
+  "deposit_amount",
+  "photo",
+  "notes"
+ ]
+}

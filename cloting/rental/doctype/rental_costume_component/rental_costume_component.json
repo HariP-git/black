@@ -1,0 +1,61 @@
+{
+ "name": "Rental Costume Component",
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": [],
+ "fields": [
+  {
+   "fieldname": "component_costume",
+   "fieldtype": "Link",
+   "label": "Component Costume",
+   "options": "Rental Costume",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "component_role",
+   "fieldtype": "Data",
+   "label": "Component Role",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "label": "Required Quantity",
+   "default": "1",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Fixed Size",
+   "description": "Leave blank to use the bundle size. Use Free Size for a size-independent component."
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Fixed Colour",
+   "description": "Leave blank to use the bundle colour."
+  }
+ ],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Rental",
+ "field_order": [
+  "component_costume",
+  "component_role",
+  "qty",
+  "mandatory",
+  "size",
+  "colour"
+ ]
+}

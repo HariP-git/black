@@ -1,0 +1,58 @@
+[
+ {
+  "doctype": "Role",
+  "name": "Security Guard",
+  "role_name": "Security Guard",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Storekeeper",
+  "role_name": "Storekeeper",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Manager",
+  "role_name": "Manager",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Rental Cashier",
+  "role_name": "Rental Cashier",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Rental Storekeeper",
+  "role_name": "Rental Storekeeper",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Rental Manager",
+  "role_name": "Rental Manager",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Rental Admin",
+  "role_name": "Rental Admin",
+  "desk_access": 1,
+  "disabled": 0,
+  "is_custom": 1
+ }
+]

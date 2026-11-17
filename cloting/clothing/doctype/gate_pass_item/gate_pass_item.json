@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "creation": "2026-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "expected_qty",
+  "declared_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "declared_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Declared Qty",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "module": "Clothing",
+ "name": "Gate Pass Item",
+ "permissions": []
+}

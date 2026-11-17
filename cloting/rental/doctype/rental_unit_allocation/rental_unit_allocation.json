@@ -1,0 +1,242 @@
+{
+ "name": "Rental Unit Allocation",
+ "autoname": "naming_series:",
+ "is_submittable": 1,
+ "track_changes": 1,
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rental Admin",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rental Manager",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Rental Cashier",
+   "read": 1,
+   "create": 1,
+   "write": 1,
+   "delete": 0,
+   "submit": 1,
+   "cancel": 0,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 0,
+   "if_owner": 0
+  },
+  {
+   "role": "Rental Storekeeper",
+   "read": 1,
+   "create": 0,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 0,
+   "if_owner": 0
+  },
+  {
+   "role": "Accounts User",
+   "read": 1,
+   "create": 0,
+   "write": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 0,
+   "if_owner": 0
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "RUA-.YYYY.-.#####",
+   "default": "RUA-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_booking",
+   "fieldtype": "Link",
+   "label": "Rental Booking",
+   "options": "Rental Booking",
+   "reqd": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rental_booking_item",
+   "fieldtype": "Data",
+   "label": "Rental Booking Item"
+  },
+  {
+   "fieldname": "bundle_instance",
+   "fieldtype": "Data",
+   "label": "Bundle Instance",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "bundle_component_role",
+   "fieldtype": "Data",
+   "label": "Bundle Component Role",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bundle_component_costume",
+   "fieldtype": "Link",
+   "label": "Bundle Component Costume",
+   "options": "Rental Costume",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rental_costume_unit",
+   "fieldtype": "Link",
+   "label": "Costume Unit",
+   "options": "Rental Costume Unit",
+   "reqd": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "allocation_status",
+   "fieldtype": "Select",
+   "label": "Allocation Status",
+   "options": "Hold\nConfirmed\nReleased\nCancelled",
+   "default": "Hold",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "hold_expires_on",
+   "fieldtype": "Datetime",
+   "label": "Hold Expires On"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Rental Unit Allocation",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Rental",
+ "actions": [],
+ "links": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "creation": "2026-11-17 00:00:00.000000",
+ "field_order": [
+  "naming_series",
+  "rental_booking",
+  "rental_booking_item",
+  "bundle_instance",
+  "bundle_component_role",
+  "bundle_component_costume",
+  "rental_costume_unit",
+  "col1",
+  "company",
+  "branch",
+  "start_date",
+  "end_date",
+  "allocation_status",
+  "hold_expires_on",
+  "amended_from"
+ ]
+}

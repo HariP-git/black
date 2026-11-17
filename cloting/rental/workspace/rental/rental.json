@@ -1,0 +1,126 @@
+{
+ "app": "cloting",
+ "charts": [],
+ "content": "[{\"id\":\"rental_onboarding\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Rental Onboarding\",\"col\":12}}]",
+ "creation": "2026-11-17 15:15:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "calendar-check",
+ "is_hidden": 0,
+ "label": "Rental",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Operations",
+   "link_count": 8,
+   "onboard": 1,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Product & Financial Analytics",
+   "link_count": 0,
+   "link_to": "product-financial-analytics",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Enquiry",
+   "link_count": 0,
+   "link_to": "Rental Enquiry",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Booking",
+   "link_count": 0,
+   "link_to": "Rental Booking",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Handover",
+   "link_count": 0,
+   "link_to": "Rental Handover",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Return",
+   "link_count": 0,
+   "link_to": "Rental Return",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Settlement",
+   "link_count": 0,
+   "link_to": "Rental Settlement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Costume",
+   "link_count": 0,
+   "link_to": "Rental Costume",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Costume Unit",
+   "link_count": 0,
+   "link_to": "Rental Costume Unit",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Settings",
+   "link_count": 0,
+   "link_to": "Rental Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-11-17 16:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Rental",
+ "name": "Rental",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 10.0,
+ "shortcuts": [],
+ "sidebar_items": []
+}

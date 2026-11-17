@@ -22,7 +22,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2026-11-14 10:56:37.112653",
+ "modified": "2026-11-16 15:15:03.371573",
  "modified_by": "Administrator",
  "module": "Clothing",
  "name": "customer-feedback",
@@ -36,20 +36,7 @@
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "customer",
-   "fieldtype": "Link",
-   "hidden": 0,
-   "label": "Customer",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Customer",
-   "precision": "",
-   "read_only": 0,
-   "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
+   "apply_user_permissions": 0,
    "default": "",
    "fieldname": "customer_name",
    "fieldtype": "Data",
@@ -64,6 +51,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "apply_user_permissions": 0,
    "fieldname": "contact_number",
    "fieldtype": "Int",
    "hidden": 0,
@@ -77,6 +65,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "apply_user_permissions": 0,
    "fieldname": "email_address",
    "fieldtype": "Data",
    "hidden": 0,
@@ -90,6 +79,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "apply_user_permissions": 0,
    "fieldname": "feedback_date",
    "fieldtype": "Date",
    "hidden": 0,
@@ -103,6 +93,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "apply_user_permissions": 0,
    "fieldname": "item_details",
    "fieldtype": "Table",
    "hidden": 0,
@@ -117,6 +108,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "apply_user_permissions": 0,
    "fieldname": "overall_rating",
    "fieldtype": "Rating",
    "hidden": 0,
@@ -130,6 +122,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "apply_user_permissions": 0,
    "fieldname": "recommendations",
    "fieldtype": "Data",
    "hidden": 0,

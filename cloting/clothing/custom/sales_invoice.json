@@ -1,0 +1,50 @@
+{
+	"custom_fields": [
+		{
+			"dt": "Sales Invoice",
+			"fieldname": "custom_return_reason",
+			"label": "Return Reason",
+			"fieldtype": "Select",
+			"options": "\nSize Issue\nColour Issue\nDefect\nWrong Item\nBilling Error\nChanged Mind\nOther",
+			"depends_on": "eval:doc.is_return",
+			"mandatory_depends_on": "eval:doc.is_return",
+			"insert_after": "is_return",
+			"in_list_view": 0,
+			"in_standard_filter": 0,
+			"allow_on_submit": 0,
+			"no_copy": 0,
+			"module": "Clothing",
+			"is_system_generated": 0
+		},
+		{
+			"dt": "Sales Invoice",
+			"fieldname": "custom_other_return_reason",
+			"label": "Other Return Reason",
+			"fieldtype": "Small Text",
+			"depends_on": "eval:doc.is_return && doc.custom_return_reason == \"Other\"",
+			"mandatory_depends_on": "eval:doc.is_return && doc.custom_return_reason == \"Other\"",
+			"insert_after": "custom_return_reason",
+			"in_list_view": 0,
+			"in_standard_filter": 0,
+			"allow_on_submit": 0,
+			"no_copy": 0,
+			"module": "Clothing",
+			"is_system_generated": 0
+		},
+		{
+			"dt": "Sales Invoice",
+			"fieldname": "custom_return_remarks",
+			"label": "Return Remarks",
+			"fieldtype": "Small Text",
+			"depends_on": "eval:doc.is_return",
+			"mandatory_depends_on": "",
+			"insert_after": "custom_other_return_reason",
+			"in_list_view": 0,
+			"in_standard_filter": 0,
+			"allow_on_submit": 0,
+			"no_copy": 0,
+			"module": "Clothing",
+			"is_system_generated": 0
+		}
+	]
+}

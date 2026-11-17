@@ -1,0 +1,18 @@
+{
+ "doctype": "Page",
+ "name": "product-financial-analytics",
+ "page_name": "product-financial-analytics",
+ "module": "Clothing",
+ "standard": "Yes",
+ "title": "Product & Financial Analytics",
+ "icon": "chart-line",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Owner"},
+  {"role": "Business Manager"},
+  {"role": "Accounts Manager"},
+  {"role": "Stock Manager"},
+  {"role": "Rental Manager"},
+  {"role": "Rental Admin"}
+ ]
+}

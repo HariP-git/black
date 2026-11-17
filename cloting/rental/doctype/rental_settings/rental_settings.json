@@ -1,0 +1,260 @@
+{
+ "name": "Rental Settings",
+ "issingle": 1,
+ "track_changes": 1,
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rental Admin",
+   "share": 1,
+   "write": 1,
+   "if_owner": 0
+  },
+  {
+   "role": "Rental Manager",
+   "read": 1,
+   "create": 0,
+   "write": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "share": 0,
+   "if_owner": 0
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_branch",
+   "fieldtype": "Link",
+   "label": "Default Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "default_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "rental_item",
+   "fieldtype": "Link",
+   "label": "Rental Charge Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "col_defaults",
+   "fieldtype": "Column Break",
+   "label": "Col Defaults"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Default Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "auto_create_accounting_documents",
+   "fieldtype": "Check",
+   "label": "Auto Create Accounting Documents",
+   "default": "0"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing and Holds"
+  },
+  {
+   "fieldname": "deposit_percent",
+   "fieldtype": "Percent",
+   "label": "Default Deposit % of Replacement",
+   "default": "0"
+  },
+  {
+   "fieldname": "late_fee_per_day",
+   "fieldtype": "Currency",
+   "label": "Late Fee Per Day",
+   "default": "0"
+  },
+  {
+   "fieldname": "cleaning_buffer_days",
+   "fieldtype": "Int",
+   "label": "Cleaning Buffer Days",
+   "default": "1",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "hold_expiry_hours",
+   "fieldtype": "Int",
+   "label": "Hold Expiry Hours",
+   "default": "2",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "col_pricing",
+   "fieldtype": "Column Break",
+   "label": "Col Pricing"
+  },
+  {
+   "fieldname": "advance_payment_percent",
+   "fieldtype": "Percent",
+   "label": "Advance Required to Confirm %",
+   "default": "100"
+  },
+  {
+   "fieldname": "auto_approve_deduction_limit",
+   "fieldtype": "Currency",
+   "label": "Auto-Approve Deduction Limit",
+   "default": "0"
+  },
+  {
+   "fieldname": "cancellation_hours_before_pickup",
+   "fieldtype": "Int",
+   "label": "Free Cancel Hours Before Pickup",
+   "default": "24"
+  },
+  {
+   "fieldname": "accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts (confirm GST with accountant)"
+  },
+  {
+   "fieldname": "rental_income_account",
+   "fieldtype": "Link",
+   "label": "Rental Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "deposit_liability_account",
+   "fieldtype": "Link",
+   "label": "Security Deposit Liability Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "late_fee_income_account",
+   "fieldtype": "Link",
+   "label": "Late Fee Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "damage_recovery_income_account",
+   "fieldtype": "Link",
+   "label": "Damage Recovery Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "col_accounts",
+   "fieldtype": "Column Break",
+   "label": "Col Accounts"
+  },
+  {
+   "fieldname": "deposit_cash_account",
+   "fieldtype": "Link",
+   "label": "Deposit Cash/Bank Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "policy_section",
+   "fieldtype": "Section Break",
+   "label": "Policies shown on quotation"
+  },
+  {
+   "fieldname": "rental_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Rental Conditions"
+  },
+  {
+   "fieldname": "cancellation_policy",
+   "fieldtype": "Text Editor",
+   "label": "Cancellation Policy"
+  },
+  {
+   "fieldname": "late_fee_policy",
+   "fieldtype": "Text Editor",
+   "label": "Late Fee Policy"
+  }
+ ],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Rental",
+ "actions": [],
+ "links": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "creation": "2026-11-17 00:00:00.000000",
+ "field_order": [
+  "defaults_section",
+  "company",
+  "default_branch",
+  "default_warehouse",
+  "rental_item",
+  "col_defaults",
+  "cost_center",
+  "mode_of_payment",
+  "auto_create_accounting_documents",
+  "pricing_section",
+  "deposit_percent",
+  "late_fee_per_day",
+  "cleaning_buffer_days",
+  "hold_expiry_hours",
+  "col_pricing",
+  "advance_payment_percent",
+  "auto_approve_deduction_limit",
+  "cancellation_hours_before_pickup",
+  "accounts_section",
+  "rental_income_account",
+  "deposit_liability_account",
+  "late_fee_income_account",
+  "damage_recovery_income_account",
+  "col_accounts",
+  "deposit_cash_account",
+  "policy_section",
+  "rental_conditions",
+  "cancellation_policy",
+  "late_fee_policy"
+ ]
+}

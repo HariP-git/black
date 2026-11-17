@@ -11,15 +11,16 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "cloting",
-# 		"logo": "/assets/cloting/logo.png",
-# 		"title": "Clothing",
-# 		"route": "/cloting",
-# 		"has_permission": "cloting.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "cloting",
+		"logo": "/assets/cloting/images/rental.svg",
+		"title": "Mr Black Rental",
+		"route": "/app/rental",
+		"has_permission": "cloting.rental.permissions.has_app_permission",
+		"sequence_id": 50,
+	}
+]
 
 # Includes in <head>
 # ------------------
@@ -49,7 +50,12 @@ app_license = "mit"
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
 doctype_js = {
-    "Sales Order": "public/js/sales_order.js"
+    "Sales Order": "public/js/sales_order.js",
+    "Purchase Order": "public/js/purchase_order.js",
+    "Purchase Receipt": "public/js/purchase_receipt.js",
+    "Sales Invoice": "public/js/sales_invoice_return_reason.js",
+    "POS Invoice": "public/js/pos_invoice_return_reason.js",
+    "Product Launch": "public/js/product_launch.js",
 }
 
 
@@ -268,10 +274,29 @@ doctype_js = {
 # ignore_translatable_strings_from = []
 doc_events = {
     "POS Invoice": {
-        "before_submit": "cloting.overrides.pos.return_limitation"
+        "validate": "cloting.overrides.return_reason.validate_return_reason",
+        "before_submit": [
+            "cloting.overrides.pos.return_limitation",
+            "cloting.overrides.return_reason.validate_return_reason",
+        ],
     },
-    "Sales Order":{
+    "Sales Invoice": {
+        "validate": "cloting.overrides.return_reason.validate_return_reason",
+        "before_submit": "cloting.overrides.return_reason.validate_return_reason",
+    },
+    "Sales Order": {
         "on_submit": "cloting.overrides.sales_order.validate_customers"
+    },
+    "Purchase Order": {
+        "validate": "cloting.api.validate_purchase_order_supplier_quality"
+    },
+    "Purchase Receipt": {
+        "validate": "cloting.clothing.doctype.gate_pass.gate_pass.check_gate_pass",
+        "on_submit": "cloting.clothing.doctype.gate_pass.gate_pass.mark_received",
+        "on_cancel": "cloting.clothing.doctype.gate_pass.gate_pass.undo_received",
+    },
+    "Gate Pass": {
+        "after_insert": "cloting.clothing.doctype.gate_pass.gate_pass.notify_storekeepers",
     }
 }
 
@@ -279,12 +304,66 @@ fixtures = [
     "Item",
 
     {"dt": "Item Group", "filters": [["MrBlack Finished Goods Material", "MrBlack Scrap Material"]]},
+    {
+        "dt": "Role",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Security Guard",
+                    "Storekeeper",
+                    "Manager",
+                    "Rental Cashier",
+                    "Rental Storekeeper",
+                    "Rental Manager",
+                    "Rental Admin",
+                ],
+            ]
+        ],
+    },
+    {"dt": "Client Script", "filters": [["name", "in", [
+        "Pricing Rule WhatsApp Offer",
+        "Sales Invoice Return Reason",
+        "POS Invoice Return Reason",
+    ]]]},
+    {"dt": "Print Format", "filters": [["name", "in", [
+        "Mr Black POS Invoice",
+        "Manufacturing Sales Order",
+        "Gate Pass Inward Slip",
+    ]]]},
+    {"dt": "Custom Field", "filters": [["name", "in", [
+        "Sales Invoice-custom_return_reason",
+        "Sales Invoice-custom_other_return_reason",
+        "Sales Invoice-custom_return_remarks",
+        "POS Invoice-custom_return_reason",
+        "POS Invoice-custom_other_return_reason",
+        "POS Invoice-custom_return_remarks",
+        "Purchase Receipt-custom_gate_pass",
+    ]]]},
 ]
 
 scheduler_events = {
+	"hourly": [
+		"cloting.rental.tasks.hourly"
+	],
 	"daily": [
-		"cloting.notifications.email_notify.customer_fit_notify"
+		"cloting.notifications.email_notify.customer_fit_notify",
+		"cloting.rental.tasks.daily",
 	]
+}
+
+after_migrate = "cloting.rental.install.after_migrate"
+
+has_permission = {
+	"Rental Settlement": "cloting.rental.permissions.settlement_has_permission",
+}
+
+doc_events = {
+	**doc_events,
+	"Rental Costume Unit": {
+		"on_trash": "cloting.rental.doctype.rental_costume_unit.rental_costume_unit.on_trash",
+	},
 }
 
 

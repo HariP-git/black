@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Mr Black Rental">
+  <rect width="128" height="128" rx="24" fill="#111827"/>
+  <path d="M32 36h64v12H32zM38 52h52v40H38z" fill="#f9fafb"/>
+  <path d="M48 52V40c0-9 7-16 16-16s16 7 16 16v12h-8V40c0-4-4-8-8-8s-8 4-8 8v12z" fill="#d1d5db"/>
+  <circle cx="64" cy="72" r="8" fill="#111827"/>
+  <path d="M64 76v10" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+</svg>

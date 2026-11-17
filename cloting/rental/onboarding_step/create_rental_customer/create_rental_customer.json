@@ -1,0 +1,19 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create Customer",
+ "creation": "2026-11-17 15:15:00.000000",
+ "description": "Use the shared ERPNext Customer master. Do not create a duplicate Rental Customer record.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_skipped": 0,
+ "title": "Add a customer",
+ "modified": "2026-11-17 15:15:00.000000",
+ "modified_by": "Administrator",
+ "name": "Create Rental Customer",
+ "owner": "Administrator",
+ "reference_document": "Customer",
+ "show_full_form": 1,
+ "validate_action": 1
+}

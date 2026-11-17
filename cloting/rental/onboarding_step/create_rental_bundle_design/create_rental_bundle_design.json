@@ -1,0 +1,14 @@
+{
+ "doctype": "Onboarding Step",
+ "name": "Create Rental Bundle Design",
+ "title": "Create a rental bundle design",
+ "description": "Define the mandatory and optional physical costume components included in one customer-facing rental bundle.",
+ "action": "New Rental Costume",
+ "action_label": "Create bundle design",
+ "is_complete": 0,
+ "is_optional": 1,
+ "creation": "2026-11-17 15:15:00.000000",
+ "modified": "2026-11-17 15:15:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator"
+}

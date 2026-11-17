@@ -1,0 +1,19 @@
+{
+ "action": "Create Entry",
+ "action_label": "Register Physical Costume Unit",
+ "creation": "2026-11-17 15:15:00.000000",
+ "description": "Register each reusable physical garment separately with a unique unit code, barcode, size, colour, warehouse, condition, and replacement value.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_skipped": 0,
+ "title": "Register a physical costume unit",
+ "modified": "2026-11-17 15:15:00.000000",
+ "modified_by": "Administrator",
+ "name": "Register Physical Costume Unit",
+ "owner": "Administrator",
+ "reference_document": "Rental Costume Unit",
+ "show_full_form": 1,
+ "validate_action": 1
+}

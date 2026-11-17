@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-16 11:35:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "planned_qty",
+  "available_stock",
+  "launch_price",
+  "hide_until_launch",
+  "originally_disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "planned_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Planned Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "available_stock",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Available Stock",
+   "read_only": 1
+  },
+  {
+   "fieldname": "launch_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Launch Price",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "hide_until_launch",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Hide Until Launch"
+  },
+  {
+   "default": "0",
+   "fieldname": "originally_disabled",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Originally Disabled",
+   "no_copy": 1,
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "module": "Clothing",
+ "name": "Launch Product",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,64 @@
+{
+ "allow_roles": [
+  {
+   "role": "Rental Admin"
+  },
+  {
+   "role": "Rental Manager"
+  },
+  {
+   "role": "Rental Cashier"
+  },
+  {
+   "role": "Rental Storekeeper"
+  },
+  {
+   "role": "Accounts User"
+  }
+ ],
+ "creation": "2026-11-17 15:15:00.000000",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2026-11-17 15:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Rental",
+ "name": "Rental Onboarding",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "is_optional": 0,
+   "step": "Configure Rental Settings"
+  },
+  {
+   "is_optional": 0,
+   "step": "Add Rental Costume"
+  },
+  {
+   "is_optional": 1,
+   "step": "Create Rental Bundle Design"
+  },
+  {
+   "is_optional": 0,
+   "step": "Register Physical Costume Unit"
+  },
+  {
+   "is_optional": 0,
+   "step": "Create Rental Customer"
+  },
+  {
+   "is_optional": 1,
+   "step": "Create Rental Enquiry"
+  },
+  {
+   "is_optional": 1,
+   "step": "Create Rental Booking"
+  },
+  {
+   "is_optional": 0,
+   "step": "View Costume Availability"
+  }
+ ],
+ "title": "Set up Mr Black Rental"
+}

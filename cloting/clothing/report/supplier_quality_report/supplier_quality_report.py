@@ -6,11 +6,13 @@ from frappe import _
 
 
 def execute(filters: dict | None = None):
-	
+	filters = frappe._dict(filters or {})
 	columns = get_columns()
-	data = get_data()
+	data = get_data(filters)
+	chart = get_chart_data(data)
+	report_summary = get_report_summary(data)
 
-	return columns, data, report_summary
+	return columns, data, None, chart, report_summary
 
 
 def get_columns() -> list[dict]:
@@ -41,38 +43,74 @@ def get_columns() -> list[dict]:
 			"fieldtype": "float",
 		},
 	]
- 
 
 
-def get_data() -> list[list]:
+def get_data(filters: dict) -> list[dict]:
 	"""Return data for the report.
 
-	The report data is a list of rows, with each row being a list of cell values.
+	The report data is a list of rows, with each row being a dictionary of cell values.
 	"""
- 
-	
-	data = frappe.db.sql("""
-                      SELECT supplier,
-                      quality_rating,
-                      lead_time_rating, 
-                      price_rating, 
-                      overall_rating
-					  FROM `tabSupplier Quality Rating`
-                      """
-                      )
+
+	conditions = ""
+	values = {}
+	if filters.get("supplier"):
+		conditions = "WHERE supplier = %(supplier)s"
+		values["supplier"] = filters.supplier
+
+	data = frappe.db.sql(
+		f"""
+		SELECT supplier, quality_rating, lead_time_rating, price_rating, overall_rating
+		FROM `tabSupplier Quality Rating`
+		{conditions}
+		ORDER BY supplier
+		""",
+		values,
+		as_dict=True,
+	)
 	return data
 
-def overall_rating():
-    data = frappe.db.sql("""
-                         select avg(overall_rating) FROM `tabSupplier Quality Rating`
-                         """)
-    return data
 
-def report_summary():
-   return  [{
- 		"value": overall_rating,
- 		"indicator": "Green" if overall_rating > 3 else "Red",
- 		"label": ("Overall rating"),
- 		"datatype": "Int",
-		}]
+def get_chart_data(data: list[dict]) -> dict:
+	labels = [row["supplier"] for row in data[:30]]
+
+	return {
+		"data": {
+			"labels": labels,
+			"datasets": [
+				{
+					"name": _("Quality Rating"),
+					"values": [row["quality_rating"] or 0 for row in data[:30]],
+				},
+				{
+					"name": _("Lead Time Rating"),
+					"values": [row["lead_time_rating"] or 0 for row in data[:30]],
+				},
+				{
+					"name": _("Price Rating"),
+					"values": [row["price_rating"] or 0 for row in data[:30]],
+				},
+				{
+					"name": _("Overall Rating"),
+					"values": [row["overall_rating"] or 0 for row in data[:30]],
+				},
+			],
+		},
+		"type": "bar",
+		"height": 300,
+	}
+
+
+def get_report_summary(data: list[dict]) -> list[dict]:
+	average_rating = (
+		sum(row["overall_rating"] or 0 for row in data) / len(data) if data else 0
+	)
+
+	return [
+		{
+			"value": average_rating,
+			"indicator": "Green" if average_rating >= 3 else "Red",
+			"label": _("Average Overall Rating"),
+			"datatype": "Float",
+		}
+	]
 

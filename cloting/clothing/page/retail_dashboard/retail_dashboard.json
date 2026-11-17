@@ -1,0 +1,15 @@
+{
+ "doctype": "Page",
+ "name": "retail-dashboard",
+ "page_name": "retail-dashboard",
+ "module": "Clothing",
+ "standard": "Yes",
+ "title": "Mr Black Retail Dashboard",
+ "icon": "dashboard",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Owner"},
+  {"role": "Sales Manager"},
+  {"role": "Stock Manager"}
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "name": "Rental Handover Item",
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": [],
+ "fields": [
+  {
+   "fieldname": "rental_costume_unit",
+   "fieldtype": "Link",
+   "label": "Costume Unit",
+   "options": "Rental Costume Unit",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "label": "Barcode",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rental_booking_item",
+   "fieldtype": "Data",
+   "label": "Booking Item"
+  },
+  {
+   "fieldname": "bundle_instance",
+   "fieldtype": "Data",
+   "label": "Bundle Instance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bundle_component_role",
+   "fieldtype": "Data",
+   "label": "Bundle Component Role",
+   "read_only": 1
+  },
+  {
+   "fieldname": "condition_at_issue",
+   "fieldtype": "Select",
+   "label": "Condition at Issue",
+   "options": "Good\nNormal Wear\nDamaged\nMissing Accessories",
+   "default": "Good",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "accessories",
+   "fieldtype": "Small Text",
+   "label": "Accessories"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Rental",
+ "actions": [],
+ "links": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "row_format": "Dynamic",
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "creation": "2026-11-17 00:00:00.000000",
+ "field_order": [
+  "rental_costume_unit",
+  "barcode",
+  "rental_booking_item",
+  "bundle_instance",
+  "bundle_component_role",
+  "condition_at_issue",
+  "accessories",
+  "photo",
+  "remarks"
+ ]
+}
